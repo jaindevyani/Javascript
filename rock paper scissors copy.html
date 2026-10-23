@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Rock Paper Scissors </title> </head>
+    
+    <body style="
+      background-color: rgb(226, 185, 191);    
+      display:flex;
+      vertical-align:center;
+       justify-content:center;
+      "> 
+      <div style="
+      border-style:solid;
+      border-color:rgb(210, 82, 103);
+      display:flex;
+      border-radius:1px;
+      padding:7px;
+      vertical-align:center;
+      justify-content:center;
+      margin-top:300px;
+      ">
+
+      <div>
+      <p> Rock Paper Scissors?</p>
+      
+      <button onclick="
+
+        pickComputerMove();
+       
+       let result='';
+
+       if (computerMove ==='Rock'){
+        result='Tie';
+      }
+        else if (computerMove==='Scissors'){
+          result='You win';
+       }
+       else if (computerMove==='Paper')
+       result='You Lose';
+
+       alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
+       ">
+        Rock
+      </button>
+
+
+      <button onclick="
+        
+         pickComputerMove();
+       
+       let result='';
+
+       if (computerMove ==='Rock'){
+        result='You win';
+      }
+        else if (computerMove==='Scissors'){
+          result='You lose';
+       }
+       else if (computerMove==='Paper')
+       result='Tie';
+
+       alert(`You picked Paper. Computer picked ${computerMove}. ${result}`);
+       ">
+        Paper
+      </button>
+
+
+      <button onclick="
+        
+         pickComputerMove();
+       
+       let result='';
+
+       if (computerMove ==='Rock'){
+        result='You Lose';
+      }
+        else if (computerMove==='Scissors'){
+          result='Tie';
+       }
+       else if (computerMove==='Paper')
+       result='You Win';
+
+       alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+       ">
+       Scissors
+      </button>
+
+      </div>
+      
+
+      <script>
+        let computerMove = ' ';
+          
+      
+      function pickComputerMove() {
+
+      
+         const randomNumber = Math.random();
+
+
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = 'Rock';
+        }
+        else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = 'Paper';
+        }
+        else {
+          computerMove = 'Scissors';
+        }
+
+        console.log(computerMove);
+      }
+    
+      </script>
+    </body>
+</html>

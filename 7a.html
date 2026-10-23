@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function greet(){
+        console.log('Hello');
+      }
+      greet();
+      greet();
+
+      function greet(name) {
+        console.log(`Hello ${name}!`);
+      }
+
+      greet('alice');
+
+      function greet(name) {
+          if (!name) {
+          console.log('Hello there!');
+        }
+        else {
+          console.log(`Hello ${name}!`);
+        }
+        }
+
+      greet();
+      greet('manpreet');
+
+    </script>
+  </body>
+</html>
